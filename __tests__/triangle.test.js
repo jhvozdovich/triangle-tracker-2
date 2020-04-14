@@ -18,4 +18,14 @@ describe("Triange", () => {
     var scalTriangle = new Triangle(4, 5, 7);
     expect(scalTriangle.checkType()).toEqual("scalene triangle");
   });
+
+  test("should correctly determine whether three lengths make an isosceles triangle", () => {
+    var isoTriangle = new Triangle(5, 5, 7);
+    expect(isoTriangle.checkType()).toEqual("isosceles triangle");
+  });
+
+  test("should correctly determine whether three lengths make an equilateral triangle", () => {
+    var eqTriangle = new Triangle(5, 5, 5);
+    expect(eqTriangle.checkType()).toEqual("equilateral triangle");
+  });
 });
